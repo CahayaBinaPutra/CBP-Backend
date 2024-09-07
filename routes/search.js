@@ -1,8 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const Content = require('../models/Content');
+
 router.get('/search', async (req, res) => {
   try {
     const { q } = req.query;
-    console.log('Search query:', q); // Logging query parameter
-
     if (!q) {
       return res.status(400).json({ message: 'Query parameter is required' });
     }
@@ -14,10 +16,10 @@ router.get('/search', async (req, res) => {
       ]
     });
 
-    console.log('Search results:', results); // Logging search results
     res.json(results);
   } catch (error) {
-    console.error('Error performing search:', error); // Improved error logging
     res.status(500).json({ message: 'Error performing search', error: error.message });
   }
 });
+
+module.exports = router;
