@@ -29,7 +29,7 @@ const chatbotRoutes = require('./routes/chatbot');
 
 app.use('/api/feedback', feedbackRoutes);
 app.use('/api/chatbot', chatbotRoutes);
-app.use('/api', searchRoutes);
+app.use('/api/search', searchRoutes);
 
 
 const PORT = process.env.PORT || 8080;
