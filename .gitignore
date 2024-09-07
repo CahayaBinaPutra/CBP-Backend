@@ -1,0 +1,59 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# Log files
+*.log
+
+# Environment files
+.env
+
+# Dependency directories
+bower_components/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# NPM package-lock file
+package-lock.json
+yarn.lock
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional coverage directory
+coverage/
+
+# Optional karma directory
+karma-coverage/
+
+# Miscellaneous
+*.tgz
+*.gz
+*.zip
+
+# Atur line endings untuk file teks
+* text=auto
+
+# Atur line endings untuk file tertentu jika diperlukan
+*.sh text eol=lf
+*.bat text eol=crlf
