@@ -5,7 +5,14 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://CahayaBinaPutra.github.io', // Ganti dengan URL frontend kamu
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type',
+};
+
+app.use(cors(corsOptions));
+
 
 app.use(express.json());
 
@@ -22,6 +29,6 @@ app.use('/api/feedback', feedbackRoutes);
 app.use('/api/chatbot', chatbotRoutes);
 app.use('/api', searchRoutes);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
