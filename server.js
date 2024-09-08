@@ -39,6 +39,16 @@ app.use('/api/feedback', feedbackRoutes);
 app.use('/api/chatbot', chatbotRoutes);
 app.use('/api', searchRoutes);
 
+// Ping server Railway setiap 25 menit
+const cron = require('node-cron');
+const axios = require('axios');
+
+cron.schedule('*/25 * * * *', () => {
+  axios.get('https://cbp-backend-production.up.railway.app') // Ganti URL dengan URL backend Railway Anda
+    .then(() => console.log('Ping successful! Keeping Railway awake.'))
+    .catch(err => console.error('Ping failed:', err));
+});
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
