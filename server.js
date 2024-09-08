@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTop
 
 // Add connection event handlers
 mongoose.connection.on('connected', () => {
-  console.log('Mongoose connected to', process.env.MONGODB_URI);
+  console.log('Mongoose connected to', process.env.MONGODB_URL);
 });
 
 mongoose.connection.on('error', (err) => {
@@ -37,7 +37,7 @@ const chatbotRoutes = require('./routes/chatbot');
 
 app.use('/api/feedback', feedbackRoutes);
 app.use('/api/chatbot', chatbotRoutes);
-app.use('/api/search', searchRoutes);
+app.use('/api', searchRoutes);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
