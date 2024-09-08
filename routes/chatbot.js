@@ -67,16 +67,16 @@ function getBotResponse(message) {
     return "Syarat pembukaan rekening atau pengajuan kredit umumnya meliputi KTP, NPWP, dan slip gaji/bukti penghasilan.";
   }
   else if (lowercaseMessage.includes('kontak') || lowercaseMessage.includes('hubungi')) {
-    return "Anda dapat menghubungi customer service kami di nomor 0361-9876543. Kami juga memiliki layanan WhatsApp di 08123456789. ";
+    return "Anda dapat menghubungi customer service kami di nomor 0361-9876543. Kami juga memiliki layanan WhatsApp di 08123625534. ";
   }
   else if (lowercaseMessage.includes('terima kasih') || lowercaseMessage.includes('thanks') || lowercaseMessage.includes('terimakasih') || lowercaseMessage.includes('terimakasi')) {
     return "Terima kasih kembali! Senang bisa membantu Anda. Apakah ada hal lain yang ingin Anda tanyakan?";
   }
   else if (lowercaseMessage.includes('promo') || lowercaseMessage.includes('rekomendasi')) {
-    return "Kami memiliki 3 program promo menarik untuk Anda. Untuk informasi lebih lengkap dan persyaratannya, silakan hubungi langsung customer service kami di nomor 0361-9876543 atau WhatsApp di 08123456789.";
+    return "Kami memiliki 3 program promo menarik untuk Anda. Untuk informasi lebih lengkap dan persyaratannya, silakan hubungi langsung customer service kami di nomor 0361-9876543 atau WhatsApp di 08123625534.";
   }
   else {
-    return "Terima kasih atas pertanyaan Anda. Untuk informasi lebih lanjut, silakan hubungi customer service kami melalui WhatsApp di nomor 087862109106. Anda juga dapat menghubungi kami melalui telepon di nomor 0361-9876543 atau kunjungi langsung kantor kami.";
+    return "Terima kasih atas pertanyaan Anda. Untuk informasi lebih lanjut, silakan hubungi customer service kami melalui WhatsApp di nomor 08123625534. Anda juga dapat menghubungi kami melalui telepon di nomor 0361-9876543 atau kunjungi langsung kantor kami.";
   }
 }
 
